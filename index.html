@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>杏林探药记</title>
+    <link rel="stylesheet" href="./styles.css?v=20260524-herb-test-v2" />
+  </head>
+  <body>
+    <main class="phone" aria-label="杏林探药记">
+      <section id="loadingScreen" class="screen loading-screen" aria-label="加载页面">
+        <img id="loadingStoryImage" class="loading-story-image" src="./img/episodes/downhill/ch01/downhill_ch01_ep001.png?v=20260523-episodes20" alt="" />
+        <div class="loading-shade"></div>
+        <img class="loading-logo" src="./img/home-LOGO.png" alt="杏林探药记" />
+        <div class="loading-copy">
+          <strong>杏林探药记</strong>
+          <span>正在进入故事...</span>
+        </div>
+      </section>
+
+      <section id="comicScreen" class="screen comic-screen is-hidden" aria-label="章节漫画">
+        <img id="comicImage" class="comic-image" src="./img/story/downhill/ch01/intro_001.png" alt="" />
+        <div class="comic-shade"></div>
+        <header class="comic-header">
+          <span id="comicSubtitle">下山篇 · 第一章</span>
+          <strong id="comicTitle">章节过场</strong>
+        </header>
+        <div id="comicDots" class="comic-dots" aria-label="漫画进度"></div>
+        <button id="comicNextButton" class="comic-next-button" type="button">继续</button>
+        <button id="comicSkipButton" class="comic-skip-button" type="button">跳过</button>
+      </section>
+
+      <section id="homeScreen" class="screen home-screen" aria-label="首页">
+        <img class="home-profile" src="./img/home-03.png" alt="贾济世 Lv.3" />
+        <img class="home-logo" src="./img/home-LOGO.png" alt="杏林探药记" />
+        <img class="home-piece-tag" src="./img/home-02.png" alt="下山篇" />
+        <img class="home-progress-card" src="./img/home-01.png?v=20260523-progress-blank" alt="当前章节进度" />
+        <div class="home-story-card" aria-label="当前剧情">
+          <span id="homeChapterText" class="home-chapter-text">第一章：贾济世惹众怒</span>
+          <strong id="homeEpisodeText" class="home-episode-text">第 05 回：药柜大乱</strong>
+          <span id="homeProgressText" class="home-progress-text">当前第 5 / 20 回</span>
+        </div>
+        <button id="homeProgressButton" class="home-progress-enter" type="button" aria-label="继续上次进度"></button>
+        <button id="homeStart" class="home-start" type="button" aria-label="重新开始，从头出发">
+          <img src="./img/home-04.png?v=20260523-restart" alt="" />
+        </button>
+        <button class="home-hotspot home-chapter" type="button" aria-label="章节">
+          <img src="./img/home-05.png" alt="" />
+        </button>
+        <button class="home-hotspot home-album" type="button" aria-label="图鉴">
+          <img src="./img/home-06.png" alt="" />
+        </button>
+        <button class="home-hotspot home-task" type="button" aria-label="任务">
+          <img src="./img/home-07.png" alt="" />
+        </button>
+        <button class="home-hotspot home-settings" type="button" aria-label="设置">
+          <img src="./img/home-08.png" alt="" />
+        </button>
+      </section>
+
+      <section id="mapScreen" class="screen map-screen is-hidden" aria-label="章节地图">
+        <div class="map-title-img" aria-label="章节选择">章节选择</div>
+        <button id="mapBackButton" class="hotspot map-back-hotspot" type="button" aria-label="返回首页">
+          <img src="./img/fight-002.png" alt="" />
+        </button>
+        <img class="map-profile" src="./img/home-03.png" alt="贾济世 Lv.3" />
+        <img class="map-piece-tag" src="./img/home-02.png" alt="下山篇" />
+
+        <section class="map-list" aria-label="章节列表">
+          <button id="mapChapterOne" class="map-item map-item-one" type="button" aria-label="继续第一章">
+            <img src="./img/map-01.png" alt="" />
+            <span id="mapProgressText" class="map-progress-text">5 / 20 回</span>
+          </button>
+          <button class="map-item map-item-two" type="button" aria-label="第二章未解锁">
+            <img src="./img/map-02.png" alt="" />
+          </button>
+          <button class="map-item map-item-three" type="button" aria-label="第三章未解锁">
+            <img src="./img/map-03.png" alt="" />
+          </button>
+          <button class="map-item map-item-four" type="button" aria-label="第四章未解锁">
+            <img src="./img/map-04.png" alt="" />
+          </button>
+        </section>
+
+        <nav class="map-nav" aria-label="底部导航">
+          <button class="map-nav-button map-nav-chapter is-active" type="button" aria-label="章节">
+            <img src="./img/home-05.png" alt="" />
+          </button>
+          <button class="map-nav-button map-nav-album" type="button" aria-label="图鉴">
+            <img src="./img/home-06.png" alt="" />
+          </button>
+          <button class="map-nav-button map-nav-task" type="button" aria-label="任务">
+            <img src="./img/home-07.png" alt="" />
+          </button>
+          <button class="map-nav-button map-nav-settings" type="button" aria-label="设置">
+            <img src="./img/home-08.png" alt="" />
+          </button>
+        </nav>
+      </section>
+
+      <section id="galleryScreen" class="screen gallery-screen is-hidden" aria-label="图鉴">
+        <button id="galleryBackButton" class="hotspot gallery-back" type="button" aria-label="返回">
+          <img src="./img/fight-002.png" alt="" />
+        </button>
+
+        <div id="galleryOverview" class="gallery-overview" aria-label="图鉴目录">
+          <div class="gallery-tabs" role="tablist" aria-label="图鉴分类">
+            <button id="storyGalleryTab" class="gallery-tab is-active" type="button" aria-label="故事图鉴">
+              <img src="./img/tujian-01.png" alt="" />
+            </button>
+            <button class="gallery-tab gallery-tab-locked" type="button" aria-label="名药暂未开放">
+              <img src="./img/tujian-02.png" alt="" />
+            </button>
+            <button class="gallery-tab gallery-tab-locked" type="button" aria-label="名医暂未开放">
+              <img src="./img/tujian-03.png" alt="" />
+            </button>
+            <button class="gallery-tab gallery-tab-locked" type="button" aria-label="名方暂未开放">
+              <img src="./img/tujian-04.png" alt="" />
+            </button>
+          </div>
+
+          <div class="gallery-chapter-list" aria-label="故事章节">
+            <button id="storyChapterOneButton" class="gallery-chapter-card gallery-chapter-one" type="button" aria-label="第一章故事图鉴">
+              <img src="./img/tujian-05-1.png" alt="" />
+              <span id="galleryChapterOneProgress" class="gallery-card-progress">共 20 回 · 已完成 0 回</span>
+            </button>
+            <button class="gallery-chapter-card gallery-chapter-locked" type="button" aria-label="第二章未解锁">
+              <img src="./img/tujian-05-2.png" alt="" />
+            </button>
+            <button class="gallery-chapter-card gallery-chapter-locked" type="button" aria-label="第三章未解锁">
+              <img src="./img/tujian-05-3.png" alt="" />
+            </button>
+            <button class="gallery-chapter-card gallery-chapter-locked" type="button" aria-label="第四章未解锁">
+              <img src="./img/tujian-05-4.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div id="galleryReader" class="gallery-reader" hidden aria-label="故事阅读">
+          <p class="gallery-reader-piece">下山篇 · 第一章</p>
+          <h1 id="galleryReaderTitle" class="gallery-reader-title">第 01 回：药庐清晨</h1>
+          <div class="gallery-reader-image-wrap">
+            <img id="galleryReaderImage" class="gallery-reader-image" src="./img/episodes/downhill/ch01/downhill_ch01_ep001.png" alt="" />
+          </div>
+          <article class="gallery-reader-text">
+            <strong id="galleryReaderEpisodeName">药庐清晨</strong>
+            <p id="galleryReaderCopy">贾济世睡得正香，连青岚先生布置的晨课都忘在脑后。</p>
+          </article>
+          <div class="gallery-reader-actions">
+            <button id="galleryPrevButton" class="gallery-reader-button gallery-prev-button" type="button" aria-label="上一页">
+              <img src="./img/tujian-02-1.png" alt="" />
+            </button>
+            <button id="galleryNextButton" class="gallery-reader-button gallery-next-button" type="button" aria-label="下一页">
+              <img src="./img/tujian-02-2.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <nav id="galleryBottomNav" class="sub-nav gallery-bottom-nav" aria-label="底部导航">
+          <button class="sub-nav-button nav-chapters" type="button"><img src="./img/home-05.png" alt="章节" /></button>
+          <button class="sub-nav-button nav-gallery is-active" type="button"><img src="./img/home-06.png" alt="图鉴" /></button>
+          <button class="sub-nav-button nav-tasks" type="button"><img src="./img/home-07.png" alt="任务" /></button>
+          <button class="sub-nav-button nav-settings" type="button"><img src="./img/home-08.png" alt="设置" /></button>
+        </nav>
+      </section>
+
+      <section id="taskScreen" class="screen sub-screen is-hidden" aria-label="任务">
+        <button class="hotspot sub-back" type="button" aria-label="返回首页">
+          <img src="./img/fight-002.png" alt="" />
+        </button>
+        <h1 class="sub-title">任务</h1>
+        <div class="sub-content task-list" aria-label="任务列表">
+          <article class="task-card"><strong>初入杏林</strong><span>完成 1 回拼图</span><i id="taskOne">0 / 1</i></article>
+          <article class="task-card"><strong>借莲引路</strong><span>使用 1 次提示</span><i id="taskHint">0 / 1</i></article>
+          <article class="task-card"><strong>眼明手快</strong><span>完成 5 次正确合并</span><i id="taskMerge">0 / 5</i></article>
+          <article class="task-card"><strong>翻阅图鉴</strong><span>进入图鉴查看一次</span><i id="taskGallery">0 / 1</i></article>
+          <article class="task-card"><strong>山门将启</strong><span>完成第一章</span><i id="taskChapter">0 / 1</i></article>
+        </div>
+        <nav class="sub-nav" aria-label="底部导航">
+          <button class="sub-nav-button nav-chapters" type="button"><img src="./img/home-05.png" alt="章节" /></button>
+          <button class="sub-nav-button nav-gallery" type="button"><img src="./img/home-06.png" alt="图鉴" /></button>
+          <button class="sub-nav-button nav-tasks is-active" type="button"><img src="./img/home-07.png" alt="任务" /></button>
+          <button class="sub-nav-button nav-settings" type="button"><img src="./img/home-08.png" alt="设置" /></button>
+        </nav>
+      </section>
+
+      <section id="settingsScreen" class="screen sub-screen is-hidden" aria-label="设置">
+        <button class="hotspot sub-back" type="button" aria-label="返回首页">
+          <img src="./img/fight-002.png" alt="" />
+        </button>
+        <h1 class="sub-title">设置</h1>
+        <div class="sub-content settings-list" aria-label="设置列表">
+          <label class="setting-row">音乐 <input id="musicToggle" type="checkbox" /></label>
+          <label class="setting-row">音效 <input id="soundToggle" type="checkbox" /></label>
+          <label class="setting-row">震动 <input id="vibrationToggle" type="checkbox" /></label>
+          <p class="version-text">版本号 MVP 0.1.0</p>
+        </div>
+        <nav class="sub-nav" aria-label="底部导航">
+          <button class="sub-nav-button nav-chapters" type="button"><img src="./img/home-05.png" alt="章节" /></button>
+          <button class="sub-nav-button nav-gallery" type="button"><img src="./img/home-06.png" alt="图鉴" /></button>
+          <button class="sub-nav-button nav-tasks" type="button"><img src="./img/home-07.png" alt="任务" /></button>
+          <button class="sub-nav-button nav-settings is-active" type="button"><img src="./img/home-08.png" alt="设置" /></button>
+        </nav>
+      </section>
+
+      <section id="gameScreen" class="screen game-screen is-hidden" aria-label="拼图页面">
+        <img class="fight-title-img" src="./img/fight-001.png?v=20260523-title-wide" alt="" />
+        <button id="backHomeButton" class="hotspot back-hotspot" type="button" aria-label="返回首页">
+          <img src="./img/fight-002.png" alt="" />
+        </button>
+        <button id="hintButton" class="hotspot hint-hotspot" type="button" aria-label="提示" hidden>
+          <img src="./img/fight-003.png" alt="" />
+        </button>
+
+        <header class="scroll-title" aria-label="回目信息">
+          <p id="pieceName">下山篇 · 第一章</p>
+          <h1><span id="sceneCounter">第 01 回</span> <span id="sceneTitle">药庐清晨</span></h1>
+        </header>
+
+        <div class="dialogue-bubble" aria-label="莲安提示">
+          <span id="speakerName">莲安</span>
+          <p id="sceneText">先从画面边缘找起吧～</p>
+        </div>
+
+        <div class="counter-pill time-pill" aria-label="倒计时">
+          <img src="./img/fight-time.png" alt="" />
+          <span class="counter-label">倒计时</span>
+          <strong id="timerText">01:48</strong>
+        </div>
+        <div class="counter-pill step-pill" aria-label="步数">
+          <img src="./img/fight-step.png" alt="" />
+          <strong id="moveCount">0</strong>
+        </div>
+
+        <section class="puzzle-frame" aria-label="拼图任务">
+          <div id="board" class="board" aria-label="可拖动拼图棋盘"></div>
+          <div id="completeOverlay" class="complete-overlay" hidden>
+            <canvas id="previewCanvas" width="1080" height="1440" aria-label="完整漫画"></canvas>
+            <div class="complete-copy">
+              <span id="completeBadge">恭喜过关</span>
+              <strong id="completeTitle">药庐清晨</strong>
+              <p id="completeText"></p>
+              <div class="complete-actions">
+                <button id="completeHomeButton" class="secondary-button" type="button">上一关</button>
+                <button id="nextButton" class="primary-button" type="button">下一关</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="bottom-hud" aria-label="拼图状态">
+          <button id="memoryButton" class="hotspot memory-hotspot" type="button" aria-label="忆图">
+            <img src="./img/fight-004.png" alt="" />
+          </button>
+          <div class="grid-plaque">
+            <img src="./img/fight-007.png" alt="" />
+            <strong id="gridLabel">4×4</strong>
+          </div>
+          <button id="storyButton" class="start-hotspot" type="button" aria-label="开始拼图">开始</button>
+          <button id="undoButton" class="hotspot undo-hotspot" type="button" aria-label="加时">
+            <img src="./img/fight-005.png?v=20260523-add-time" alt="" />
+          </button>
+          <button id="shuffleButton" class="hotspot shuffle-hotspot" type="button" aria-label="重排">
+            <img src="./img/fight-006.png" alt="" />
+          </button>
+          <div class="sr-status">
+            <span id="objective">阅读剧情，开始拼图</span>
+            <span id="mergeCount">1 / 16</span>
+            <i id="progressFill"></i>
+          </div>
+        </footer>
+      </section>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    </main>
+
+    <script src="./game.js?v=20260524-herb-test-v2"></script>
+    <script>
+      window.setTimeout(() => {
+        document.getElementById("loadingScreen")?.remove();
+      }, 2300);
+    </script>
+  </body>
+</html>
