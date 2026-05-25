@@ -1,9 +1,9 @@
 const STORAGE_KEY = "xinglin_player_state";
 const difficultyCycle = [3, 3, 4, 4, 5, 3, 4, 5, 3, 4, 5, 3, 3, 4, 4, 5, 3, 4, 5, 3];
 const timeByGrid = { 3: 180, 4: 240, 5: 300 };
-const EPISODE_ASSET_VERSION = "20260523-episodes20";
-const STORY_ASSET_VERSION = "20260523-story-ch01";
-const HERB_ASSET_VERSION = "20260524-herb-test-v2";
+const EPISODE_ASSET_VERSION = "20260525-compressed-ep-fix";
+const STORY_ASSET_VERSION = "20260525-compressed-story";
+const HERB_ASSET_VERSION = "20260525-compressed-herb";
 const imageWidth = 1080;
 const imageHeight = 1440;
 
@@ -1445,6 +1445,7 @@ function nextEpisode() {
   if (state.activeHerbTest) {
     return;
   }
+  continueMainAfterHerbTest();
 }
 
 function renderChapterStrip() {
